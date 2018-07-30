@@ -1,0 +1,44 @@
+extends /layout/main
+block variables
+    - var title = 'Count Calories'
+block content
+    nav
+        .nav-wrapper.blue
+            .container
+                a(href="#").brand-logo.center Track calories
+                ul.right
+                    li
+                        a(href="#").clear-btn.btn Clear all
+    .form-wrapper
+        .container
+            .card
+                .card-content
+                    span.card-title Add meal / Food item
+                    form
+                        .row
+                            .col.s6
+                                .input-field
+                                    label(for="meal") Meal
+                                    input(type="text" name="meal" id="meal")
+                            .col.s6
+                                .input-field
+                                    label(for="calories") Calories
+                                    input(type="number" name="calories" id="calories")
+                        .row
+                            button.add-btn.btn.blue.darken-3
+                                i.fa.fa-plus 
+                                |Add meal
+                            button.update-btn.btn.orange.darken-3       
+                                i.fas.fa-pencil-alt
+                                |Update meal
+                            button.delete-btn.btn.red.darken-3
+                                i.fa.fa-trash
+                                |Delete meal
+                            button.back-btn.btn.grey.darken-3.right
+                                i.fas.fa-chevron-circle-left
+                                |Back
+            h3.center-align Total Calories: 
+                span.total-calories 0
+            ul(id='collection-list').collection
+        </div>
+    </div>
